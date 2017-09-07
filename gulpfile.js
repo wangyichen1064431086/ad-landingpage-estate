@@ -115,8 +115,13 @@ gulp.task('serve',gulp.series('html','style','script',function() {
 }));
 
 
-
-gulp.task('build',gulp.series('html','style','script',() => {
+gulp.task('del', (done) => {
+ del(['.tmp','dist']).then( paths => {
+    console.log('Deleted files:\n',paths.join('\n'));
+    done();
+  });
+});
+gulp.task('build',gulp.series('del','html','style','script',() => {
   const destDir = 'dist';
 
 	return gulp.src('.tmp/*.html')
@@ -141,15 +146,11 @@ gulp.task('build',gulp.series('html','style','script',() => {
     .pipe(gulp.dest(destDir));
     
 }));
-gulp.task('del', (done) => {
- del(['.tmp','dist']).then( paths => {
-    console.log('Deleted files:\n',paths.join('\n'));
-    done();
-  });
-});
+
 gulp.task('publish',gulp.series('del','build',() =>{
   const destDir = '../dev_www/frontend/tpl/marketing';
-  const finalName = `${path.basename(__dirname)}.html`;
+  //const finalName = `${path.basename(__dirname)}.html`;
+  const finalName = "estate_201709.html";
   //const finalPath = path.resolve('dist',finalName);
   return gulp.src('dist/index.html')
     .pipe($.rename(finalName))
