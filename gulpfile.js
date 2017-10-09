@@ -150,7 +150,7 @@ gulp.task('build',gulp.series('del','html','style','script',() => {
 gulp.task('publish',gulp.series('del','build',() =>{
   const destDir = '../dev_www/frontend/tpl/marketing';
   //const finalName = `${path.basename(__dirname)}.html`;
-  const finalName = "estate_201709.html";
+  const finalName = "estate_201710.html";
   //const finalPath = path.resolve('dist',finalName);
   return gulp.src('dist/index.html')
     .pipe($.rename(finalName))
