@@ -120,21 +120,19 @@ body{
     text-align: center;
     height:100%;
     line-height: 35px;
-    /*
+  
     &::before {
       content:"";
       height:100%;
       display:inline-block;
       vertical-align: middle;
     }
-    */
-    
+
     img {
       width:25px;
       height:25px;
-      display:block;
-      margin:5px 0;
       display: inline-block;
+      vertical-align: middle;
     }
 
     span {
@@ -142,13 +140,8 @@ body{
       letter-spacing: 5px;
       color:white;
       display: inline-block;
-      height:100%;
-      /*line-height:35px;
-       vertical-align: middle;*/
       font-size:2em;
-      margin-bottom:30px;
-      position: relative;
-      top: -10px;
+      vertical-align: middle;
     }
   }
 }
