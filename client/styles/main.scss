@@ -70,6 +70,8 @@ body{
         background: white;
         /*color:white;*/
         color:black;
+        -webkit-appearance: none; 
+        -moz-appearance: none;       
         &::-webkit-input-placeholder {
           color:#bcbbc2;
         }
@@ -79,7 +81,7 @@ body{
         &::-moz-placeholder {
           color:#bcbbc2;
         }
-        &:-ms-input-placeholder {
+        &::-ms-input-placeholder {
           color:#bcbbc2;
         }
       }
