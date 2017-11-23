@@ -54,7 +54,7 @@ body{
     .form-input {
       box-sizing: border-box;
       /*border: thin solid blue;*/
-      padding:1% 5% 1% 15%;
+      padding:1% 5% 2% 15%;
       width:100%;
       height:40%;
 
@@ -62,12 +62,28 @@ body{
         width:100%;
         height:100%;
         box-sizing: border-box;
+        padding-left:5px;
         border-radius:2px;
-        border:none;
+        border:1px solid #bcbbc2;
         outline: none;
-        background:#081e2c;
-        color:white;
+        /*background:#081e2c;*/
+        background: white;
+        /*color:white;*/
+        color:black;
+        &::-webkit-input-placeholder {
+          color:#bcbbc2;
+        }
+        &:-moz-placeholder {
+          color:#bcbbc2;
+        }
+        &::-moz-placeholder {
+          color:#bcbbc2;
+        }
+        &:-ms-input-placeholder {
+          color:#bcbbc2;
+        }
       }
+ 
     }
     .form-word {
       /*font-size: 12px;*/
