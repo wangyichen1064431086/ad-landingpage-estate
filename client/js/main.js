@@ -19,7 +19,7 @@ $("#submit").on("click", function(event) {
     },
     body: {
       ielement: {
-        cid: dataCode,
+        cid: dataCode,//FTCC5056EBAE6
         mod1: name,
         mod2: phone
       }
